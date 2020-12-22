@@ -19,7 +19,7 @@ class UserProfile(User):
     branch=models.TextField()
     year=models.IntegerField()
     section=models.CharField(max_length=1)
-    profile_image=models.ImageField()
+    profile_image=models.ImageField(blank=True)
     contact_no = PhoneNumberField(null=False, blank=False, unique=True)
 
 class UserFollowing(models.Model):
